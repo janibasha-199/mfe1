@@ -1,4 +1,7 @@
 <h2>MFE</h2>
 <div class="main">
-    <h3> HEY <span class="name">{{ name | uppercase }}</span> YOUR MFE LOADED</h3>
+    <h3> MFE LOADED</h3>
+    <h3 *ngIf="(cartState | async )?.quantity"><span class="name">{{ (cartState |
+            async )?.name | uppercase }}</span>{{ (cartState |
+        async )?.quantity}} ITEM(S) ADDED IN YOUR CART</h3>
 </div>
